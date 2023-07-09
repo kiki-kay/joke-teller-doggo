@@ -5,7 +5,8 @@ html{
 
 body{
     margin: 0;
-    background: #f5d902;
+    /* background: #f5d902; */
+    background-color: rgb(174, 187, 248); /*The same as gif*/
 }
 
 .container{
