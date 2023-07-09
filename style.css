@@ -35,6 +35,17 @@ button{
     border-radius: 10px;
     box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.5);
 }
+/* --- Psuedo class for button --- */
+button:hover{ /* visual feedback as its hovered */
+    filter: brightness(80%);
+}
+button:active{
+    transform: scale(0.9);
+}
+button:disabled{
+    cursor: default;
+    filter: brightness(20);
+}
 
 /* Media Queries: Tablet or smaller */
 @media screen and (max-width: 1000px) {
