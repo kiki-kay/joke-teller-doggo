@@ -75,10 +75,10 @@ var VoiceRSS = {
 // Test API//
 function test(){
     VoiceRSS.speech({
-        key: '<89299f7189f9474395ee46a70dce99d8>',
-        src: 'Hello, world!',
-        hl: 'en-us',
-        v: 'Linda',
+        key: '89299f7189f9474395ee46a70dce99d8',
+        src: 'Good day, mate!',
+        hl: 'en-au',
+        v: 'Jack',
         r: 0, 
         c: 'mp3',
         f: '44khz_16bit_stereo',
