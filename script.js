@@ -1,11 +1,11 @@
 
 // Voice RSS JS SDK //
-"use strict";
+// "use strict";
 var VoiceRSS = {
   speech: function(e) {
     this._validate(e), this._request(e)
   },
-  _validate: function(e) {
+  _validate: function(e) { //Validate correct setting data//
     if (!e) throw "The settings are undefined";
     if (!e.key) throw "The API key is undefined";
     if (!e.src) throw "The text is undefined";
@@ -76,9 +76,9 @@ var VoiceRSS = {
 function test(){
     VoiceRSS.speech({
         key: '<89299f7189f9474395ee46a70dce99d8>',
-        src: 'Gday mate!',
-        hl: 'en-au',
-        v: 'ZOE',
+        src: 'Hello, world!',
+        hl: 'en-us',
+        v: 'Linda',
         r: 0, 
         c: 'mp3',
         f: '44khz_16bit_stereo',
