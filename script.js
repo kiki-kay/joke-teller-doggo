@@ -1,4 +1,7 @@
 //Target button and audio elements//
+const button = document.getElementById('button');
+const audioElement = document.getElementById('audio');
+
 // Voice RSS JS SDK //
 const VoiceRSS = {
     speech: function(e) {
