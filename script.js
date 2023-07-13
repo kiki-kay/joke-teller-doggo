@@ -74,19 +74,32 @@ const VoiceRSS = {
     }
   };
 
-// Test API//
-function test(){
-    VoiceRSS.speech({
-        key: '89299f7189f9474395ee46a70dce99d8',
-        src: 'Good day, mate!',
-        hl: 'en-au',
-        v: 'Jack',
-        r: 0, 
-        c: 'mp3',
-        f: '44khz_16bit_stereo',
-        ssml: false
-    });
+// // Test Voice API//
+// function test(){
+//     VoiceRSS.speech({
+//         key: '89299f7189f9474395ee46a70dce99d8',
+//         src: 'Hello, mate!',
+//         hl: 'en-au',
+//         v: 'Zoe',
+//         r: 0, 
+//         c: 'mp3',
+//         f: '44khz_16bit_stereo',
+//         ssml: false
+//     });
+// }
+
+// //Call test function//
+// test();
+
+//Get Jokes from Joke API
+async function  getJoke{
+  try{
+    something;
+  } catch (error) {
+    //Catch errors
+    onsole.log('Errors occured.', error);
+  }
 }
 
-//Call test function//
-test();
+//Test getJoke()//
+getJoke();
