@@ -97,7 +97,7 @@ async function  getJoke(){
     something;
   } catch (error) {
     //Catch errors
-    onsole.log('Errors occured.', error);
+    console.log('Errors occured.', error);
   }
 }
 
