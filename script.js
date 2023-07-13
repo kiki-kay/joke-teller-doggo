@@ -92,7 +92,7 @@ const VoiceRSS = {
 // test();
 
 //Get Jokes from Joke API
-async function  getJoke{
+async function  getJoke(){
   try{
     something;
   } catch (error) {
