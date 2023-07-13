@@ -93,11 +93,21 @@ const VoiceRSS = {
 
 //Get Jokes from Joke API
 async function  getJoke(){
+  let joke = '';
+  //Fetch API//
+  const apiUrl = 'https://v2.jokeapi.dev/joke/Programming,Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit';
   try{
-    something;
+    const response = await fetch(apiUrl);
+    const data = await response.json(); // Convert the url to json notation.
+    //Display joke with setup and delivery/punch line
+    if (data.setup){
+      joke = `${data.setup} ... ${data.delivery}`;
+    } else {
+      joke = data.joke;
+    }
+    console.log(joke);
   } catch (error) {
-    //Catch errors
-    console.log('Errors occured.', error);
+    console.log('Something went wrong!', error);
   }
 }
 
