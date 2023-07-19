@@ -74,6 +74,11 @@ const VoiceRSS = {
     }
   };
 
+// Disable/enable button //
+function toggleButton(){
+  button.disabled = !button.disabled;
+}
+
 // // Test Voice API//
 // function testSpeech(){
 //   VoiceRSS.speech({
@@ -94,7 +99,8 @@ const VoiceRSS = {
 //Connect getJoke() and speech() by passing jokes to speech() //
 function passJoke(joke){
 console.log('Tell me', joke);//Test if getting a joke
-//get Voice API//
+
+//Apply Voice API key//
 VoiceRSS.speech({
   key: '89299f7189f9474395ee46a70dce99d8',
   src: joke,
@@ -107,7 +113,7 @@ VoiceRSS.speech({
 });
 }
 
-//Get Jokes from Joke API
+//Get Jokes from Joke APIurl
 async function  getJoke(){
   let joke = '';
   //Fetch API//
@@ -115,18 +121,24 @@ async function  getJoke(){
   try{
     const response = await fetch(apiUrl);
     const data = await response.json(); // Convert the url to json notation.
-    //Display joke with setup and delivery/punch line
+    //Display joke with setup and delivery/punch line.
     if (data.setup){
       joke = `${data.setup} ... ${data.delivery}`;
     } else {
       joke = data.joke;
     }
-    passJoke(joke);// console.log(joke);
+    // Get joke//
+    passJoke(joke);// For testing: console.log(joke);
+    // Disable button while the audio is playing//
+    toggleButton();
   } catch (error) {
     console.log('Something went wrong!', error);
   }
 }
 
-//Test getJoke function//
-// getJoke();
-// Call eventListener instead of getJoke()
+// Test getJoke function //
+//getJoke();
+
+// Event Listeners //
+button.addEventListener('click', getJoke);// Use event instead of getJoke funciton to connect button with speech().
+audioElement.addEventListener('ended', toggleButton);//Call toggleButton function to diable button.
