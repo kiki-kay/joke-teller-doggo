@@ -91,6 +91,11 @@ const VoiceRSS = {
 // //Call test function//
 // test();
 
+//Connect getJoke() and speech() by passing jokes to speech() //
+function tellMe(joke){
+
+}
+
 //Get Jokes from Joke API
 async function  getJoke(){
   let joke = '';
