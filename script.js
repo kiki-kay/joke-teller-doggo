@@ -97,7 +97,7 @@ console.log('Tell me', joke);//Test if getting a joke
 //get Voice API
 VoiceRSS.speech({
   key: '89299f7189f9474395ee46a70dce99d8',
-  src: 'Hello, mate!',
+  src: joke,
   hl: 'en-au',
   v: 'Zoe',
   r: 0, 
