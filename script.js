@@ -92,7 +92,8 @@ const VoiceRSS = {
 // test();
 
 //Connect getJoke() and speech() by passing jokes to speech() //
-function tellMe(joke){
+function passJoke(joke){
+console.log('Tell me', joke);//Test if getting a joke
 
 }
 
@@ -110,7 +111,7 @@ async function  getJoke(){
     } else {
       joke = data.joke;
     }
-    console.log(joke);
+    passJoke(joke);// console.log(joke);
   } catch (error) {
     console.log('Something went wrong!', error);
   }
