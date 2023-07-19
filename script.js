@@ -88,13 +88,13 @@ const VoiceRSS = {
 // });
 // }
 
-// //TestSpeech function//
+// TestSpeech function//
 // testSpeech();
 
 //Connect getJoke() and speech() by passing jokes to speech() //
 function passJoke(joke){
 console.log('Tell me', joke);//Test if getting a joke
-//get Voice API
+//get Voice API//
 VoiceRSS.speech({
   key: '89299f7189f9474395ee46a70dce99d8',
   src: joke,
@@ -127,5 +127,6 @@ async function  getJoke(){
   }
 }
 
-//Test getJoke()//
-getJoke();
+//Test getJoke function//
+// getJoke();
+// Call eventListener instead of getJoke()
