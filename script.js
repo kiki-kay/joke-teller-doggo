@@ -75,26 +75,36 @@ const VoiceRSS = {
   };
 
 // // Test Voice API//
-// function test(){
-//     VoiceRSS.speech({
-//         key: '89299f7189f9474395ee46a70dce99d8',
-//         src: 'Hello, mate!',
-//         hl: 'en-au',
-//         v: 'Zoe',
-//         r: 0, 
-//         c: 'mp3',
-//         f: '44khz_16bit_stereo',
-//         ssml: false
-//     });
+// function testSpeech(){
+//   VoiceRSS.speech({
+//     key: '89299f7189f9474395ee46a70dce99d8',
+//     src: 'Hello, mate!',
+//     hl: 'en-au',
+//     v: 'Zoe',
+//     r: 0, 
+//     c: 'mp3',
+//     f: '44khz_16bit_stereo',
+//     ssml: false
+// });
 // }
 
-// //Call test function//
-// test();
+// //TestSpeech function//
+// testSpeech();
 
 //Connect getJoke() and speech() by passing jokes to speech() //
 function passJoke(joke){
 console.log('Tell me', joke);//Test if getting a joke
-
+//get Voice API
+VoiceRSS.speech({
+  key: '89299f7189f9474395ee46a70dce99d8',
+  src: 'Hello, mate!',
+  hl: 'en-au',
+  v: 'Zoe',
+  r: 0, 
+  c: 'mp3',
+  f: '44khz_16bit_stereo',
+  ssml: false
+});
 }
 
 //Get Jokes from Joke API
