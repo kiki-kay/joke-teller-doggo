@@ -33,7 +33,7 @@ button{
     background: black;
     border: none;
     border-radius: 10px;
-    box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.5);
 }
 /* --- Psuedo class for button --- */
 button:hover{ /* visual feedback as it's hovered */
@@ -43,8 +43,8 @@ button:active{
     transform: scale(0.9);
 }
 button:disabled{
-    cursor: default;
-    filter: brightness(20);
+    cursor: not-allowed;
+    filter: brightness(20%);
 }
 
 /* Media Queries: Tablet or smaller */
